@@ -5,3 +5,5 @@
 050    01 negative-array occurs 3 times pic s9.
 060    01 pos-index pic 9.
 070    01 neg-index pic 9.
+080    01 summa-pos pic 99.
+090    01 pos-array-size pic 9 value 4.

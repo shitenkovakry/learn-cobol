@@ -5,6 +5,7 @@
 050    copy 'variables'.
 060        01 expected-positive-array occurs 4 times pic 9.
 061        01 expected-negative-array occurs 3 times pic s9.
+062        01 expected-summa-pos pic 99.
 070
 080    procedure division.
 081        move 3 to array(7).
@@ -20,9 +21,11 @@
 0602       move 4 to expected-positive-array(2).
 0603       move 1 to expected-positive-array(1).
 0604
-0605       move -1 to expected-negative-array(3)
-0606       move -6 to expected-negative-array(2)
-0607       move -2 to expected-negative-array(1)
+0605       move -1 to expected-negative-array(3).
+0606       move -6 to expected-negative-array(2).
+0607       move -2 to expected-negative-array(1).
+0608
+0609       move 15 to expected-summa-pos.
 0900
 1000       perform ungroup-array.
 1200           display 'actual positive array: ' positive-array(1) ' '
@@ -41,6 +44,13 @@
 1310                   expected-negative-array(2) ' '
 1311                   expected-negative-array(3) ' ' .
 1312
+1313       perform summa-positive-array.
+1314           display ' '
+1315           display 'actual summa of positive array: ' summa-pos
+1316           display 'expected summa of positive: ' expected-summa-pos.
+1317           display ' '
+1318
 1400   stop run.
 1500
 1600   copy 'ungroup-array-implementation'.
+1700   copy 'summa-pos-array-implementation'.
