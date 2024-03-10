@@ -7,3 +7,5 @@
 070    01 neg-index pic 9.
 080    01 summa-pos pic 99.
 090    01 pos-array-size pic 9 value 4.
+091    01 summa-neg pic s99.
+092    01 neg-array-size pic 9 value 3.
